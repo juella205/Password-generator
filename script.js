@@ -1,4 +1,51 @@
 // Assignment code here
+//const lowerCase = "abcdefghijklmnopqrstuvwxyz"
+ // const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ // const numbers = "1234567890"
+  //const characters = "!@#$%^&*"
+
+  var lowerCase = [
+
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z'
+  ];
+
+  var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+  var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+
+  var specialCharacters = ['!','@', '#', '$', '%', '^', '&', '*', '?'];
+
+
+
+
+
+
+
 
 
 // Get references to the #generate element
@@ -19,10 +66,7 @@ function generatePassword() {
 
   // possible characters for the password
   let totalCharacters = "";
-  const lowerCase = "abcdefghijklmnopqrstuvwxyz"
-  const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  const numbers = "1234567890"
-  const characters = "!@#$%^&*"
+ 
  
   // get the password length
   let passwordLength = prompt("Enter the password length (8-128 characters)");
@@ -31,9 +75,7 @@ function generatePassword() {
   // validate password length
   if (passwordLength < 8 || passwordLength > 128) {
     alert("this number is not valid")
-    alert("You must select at least one type of characters!")
     return generatePassword();
-    
   }
 
   let lowerConfirm = confirm("Do you want to include lowercase characters?");
@@ -51,9 +93,9 @@ function generatePassword() {
     totalCharacters += numbers
   }
  
-  let charactersConfirm = confirm("Do you want to include characters?");
-  if (charactersConfirm == true) {
-    totalCharacters += characters
+  let specialCharactersConfirm = confirm("Do you want to include special characters?");
+  if (specialCharactersConfirm == true) {
+    totalCharacters += specialCharacters
   }
   
 
